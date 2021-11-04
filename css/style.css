@@ -1,0 +1,97 @@
+.block-1 {
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+
+/* hover - псевдокласс, который меняет элемент при наведений курсора */
+.block-1:hover {
+    width: 150px;
+    height: 150px;
+    background-color: crimson;
+}
+
+/* ative начинает работать в тот момент, когда мы
+кликаем на элемент и перестает тогда, когда опкскаем мышку */
+.block-1:active {
+    background-color: darkmagenta;
+}
+
+/* focus срабатывет при клике на элемент мышкой,
+перествет фокусировать, когда кликаем вне элемента  */
+.input-1:focus {
+    background-color: red;
+}
+
+/* псевдоэлементы before и after позволяют добавить элементы
+в на нашу страничку, не используя HTML */
+.block-1::before {
+    content: "before content";
+}
+
+.block-1::after {
+    content: "after content";
+}
+
+li {
+    width: 100px;
+    height: 50px;
+    background-color: red;
+    margin: 10px;
+    list-style: none;
+}
+
+li:first-child {
+    background-color: yellow;
+}
+
+li:nth-child(2) {
+    background-color: green;
+}
+
+li:last-child {
+    background-color: blue;
+}
+
+/* подсечивает ссылку на которую уже входили */
+a:visited {
+    color: red
+}
+
+/* not - значит обращаемся ко всем элементам кроме тех
+что указано на скобках */
+div:not(.div-2, .div-1) {
+    background-color: violet;
+}
+
+/* valid срабатывает когда все верные данные
+   invalid это инвалид, помянем */
+input {
+    background-color: white;
+}
+input:valid {
+    background-color: green;
+}
+input:invalid {
+    background-color: red;
+}
+input::placeholder {
+    text-align: center;
+}
+
+/* применяет стили к выделенному тексту */
+p::selection {
+    color: green;
+    font-size: 40px;
+    background-color: yellow;
+}
+
+/* применяет стили к первой строчке */
+p::first-line {
+    color: yellow;
+}
+
+/* применяет стили первой букве  */
+p::first-letter {
+    color: red;
+}
